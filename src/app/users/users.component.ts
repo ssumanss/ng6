@@ -10,13 +10,14 @@ import { Observable } from 'rxjs';
 
 export class UsersComponent implements OnInit {
 
+  // tslint:disable-next-line:ban-types
   users$: Object;
-  
+
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.getUsers().subscribe(
-      data => this.users$ = data 
+      data => this.users$ = data
     );
   }
 
